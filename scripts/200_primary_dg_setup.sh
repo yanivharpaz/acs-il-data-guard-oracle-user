@@ -38,7 +38,7 @@ run_scripts_primary() {
     # /bin/bash -c "sudo /tmp/setup_cdb1.sh configure"
     /bin/bash -c "/tmp/210_change_sys_password.sh"
     echo "/tmp/190_update_db_config.sh $ORACLE_SID"
-    # /bin/bash -c "/tmp/190_update_db_config.sh $ORACLE_SID"
+    /bin/bash -c "/tmp/190_update_db_config.sh $ORACLE_SID"
     # /bin/bash -c "/tmp/112_open_port.sh $LISTENER_PORT"
 
     /bin/bash -c "/tmp/310_copy_tns_files_primary.sh"
