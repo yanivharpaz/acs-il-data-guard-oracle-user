@@ -1,11 +1,11 @@
 #!/bin/bash
 #
 
-if [ $# -ne 1 ]
-then
-    echo "Usage: sudo $0 [ ORACLE_SID ] "
-    exit 1
-fi
+# if [ $# -ne 1 ]
+# then
+#     echo "Usage: sudo $0 [ ORACLE_SID ] "
+#     exit 1
+# fi
 
 echo "Reading configuration"
 NEW_CONFIG_NAME="oracle_rdbms_config_sample.conf"
@@ -50,6 +50,6 @@ run_scripts_primary() {
 #prep_dg_01
 #cat /tmp/prep_dg.log
 
-run_scripts_primary
+# run_scripts_primary
 
 exit 0

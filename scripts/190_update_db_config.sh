@@ -1,11 +1,11 @@
 #!/bin/bash
 #
 
-if [ $# -ne 1 ]
-then
-    echo "Usage: sudo $0 [ ORACLE_SID ] "
-    exit 1
-fi
+# if [ $# -ne 1 ]
+# then
+#     echo "Usage: sudo $0 [ ORACLE_SID ] "
+#     exit 1
+# fi
 
 
 echo "Reading configuration"
