@@ -81,7 +81,7 @@ test_exec()
             select member from v\\\$logfile;
             spool off
             exit;
-            EOF" 
+EOF" 
 }
 
 
