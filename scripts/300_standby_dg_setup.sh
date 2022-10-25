@@ -9,7 +9,7 @@
 
 if [ $# -ne 1 ]
 then
-    echo "Usage: $0 [ STANDBY UNIQUE NAME ] "
+    echo "Usage: $0 [ ORACLE_SID ] "
     exit 1
 fi
 
