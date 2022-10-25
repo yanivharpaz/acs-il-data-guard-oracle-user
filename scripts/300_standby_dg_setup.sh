@@ -40,7 +40,7 @@ if [ ! -f "$GREP" ]; then GREP=/bin/grep; fi
 
 
 run_scripts_standby() {
-    /bin/bash -c "/tmp/112_open_port.sh $LISTENER_PORT"
+    # /bin/bash -c "/tmp/112_open_port.sh $LISTENER_PORT"
 
     /bin/bash -c "/tmp/410_copy_tns_files_standby.sh"
     /bin/bash -c "/tmp/110_restart_listener.sh"
