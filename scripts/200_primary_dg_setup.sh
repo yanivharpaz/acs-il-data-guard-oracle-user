@@ -15,8 +15,6 @@ NEW_CONFIGURATION="/tmp/$NEW_CONFIG_NAME"
 
 echo "ORACLE_HOME       : $ORACLE_HOME"
 
-# export ORACLE_HOME=/opt/oracle/product/19c/dbhome_1
-
 # General exports and vars
 export PATH=$ORACLE_HOME/bin:$PATH
 LSNR=$ORACLE_HOME/bin/lsnrctl
@@ -38,15 +36,15 @@ if [ ! -f "$GREP" ]; then GREP=/bin/grep; fi
 run_scripts_primary() {
     # /tmp/080_prep_dg.sh
     # /bin/bash -c "sudo /tmp/setup_cdb1.sh configure"
-    # $SU -s /bin/bash  $ORACLE_OWNER -c "/tmp/210_change_sys_password.sh"
+    /bin/bash -c "/tmp/210_change_sys_password.sh"
     echo "/tmp/190_update_db_config.sh $ORACLE_SID"
-    /bin/bash -c "/tmp/190_update_db_config.sh $ORACLE_SID"
+    # /bin/bash -c "/tmp/190_update_db_config.sh $ORACLE_SID"
     # /bin/bash -c "/tmp/112_open_port.sh $LISTENER_PORT"
 
-    # $SU -s /bin/bash  $ORACLE_OWNER -c "/tmp/310_copy_tns_files_primary.sh"
-    # $SU -s /bin/bash  $ORACLE_OWNER -c "/tmp/120_dg_broker_start.sh"
-    # $SU -s /bin/bash  $ORACLE_OWNER -c "/tmp/110_restart_listener.sh"
-    # $SU -s /bin/bash  $ORACLE_OWNER -c "/usr/bin/cp -pv $ORACLE_HOME/dbs/orapw* /tmp"
+    /bin/bash -c "/tmp/310_copy_tns_files_primary.sh"
+    /bin/bash -c "/tmp/120_dg_broker_start.sh"
+    /bin/bash -c "/tmp/110_restart_listener.sh"
+    /bin/bash -c "/usr/bin/cp -pv $ORACLE_HOME/dbs/orapw* /tmp"
 
 }
 #prep_dg_01

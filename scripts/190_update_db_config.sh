@@ -32,74 +32,12 @@ if [ -z "$SU" ];then SU=/bin/su; fi
 if [ -z "$GREP" ]; then GREP=/usr/bin/grep; fi
 if [ ! -f "$GREP" ]; then GREP=/bin/grep; fi
 
-# Entry point to configure the DB
-# configure()
-# {
-#     check_for_configuration
-#     RETVAL=$?
-#     if [ $RETVAL -eq 0 ]
-#     then
-#         echo "Oracle Database instance $ORACLE_SID is already configured."
-#         exit 1
-#     fi
-#     read_config_file
-#     check_port_availability
-#     check_em_express_port_availability
-#     configure_perform
-# }
-
-# check_port_availability()
-# {
-#     port=`netstat -n --tcp --listen | $GREP :$LISTENER_PORT`
-#     if [ "$port" != "" ]
-#     then
-#         echo "Port $LISTENER_PORT appears to be in use by another application. Specify a different port in the configuration file '$CONFIGURATION'"
-#         exit 1;
-#     fi
-# }
-
-# check_for_configuration()
-# {
-#     configfile=`$GREP --no-messages $ORACLE_SID:$ORACLE_HOME /etc/oratab` > /dev/null 2>&1
-#     if [ "$configfile" = "" ]
-#     then
-#         return 1
-#     fi
-#     return 0
-# }
-
-# read_config_file()
-# {
-#     if [ -f "$CONFIGURATION" ]
-#     then
-#         . "$CONFIGURATION"
-#     else
-#         echo "The Oracle Database is not configured. Unable to read the configuration file '$CONFIGURATION'"
-#         exit 1;
-#     fi
-# }
-
-
-# To start the DB
 prep_dg_01()
 {
-    # check_for_configuration
-    # RETVAL=$?
-    # if [ $RETVAL -eq 1 ]
-    # then
-    #     echo "The Oracle Database is not configured. You must run '/etc/init.d/oracledb_$ORACLE_SID-$ORACLE_VERSION configure' as the root user to configure the database."
-    #     exit
-    # fi
-    # Check if the DB is already started
-    echo `ps -ef | egrep pmon_$ORACLE_SID'\>' | $GREP -v grep`
 
     pmon=`ps -ef | egrep pmon_$ORACLE_SID'\>' | $GREP -v grep`
-    echo "pmon: $pmon"
     if [ "$pmon" != "" ];
     then
-
-        # Unset the proxy env vars before calling sqlplus
-        # unset_proxy_vars
 
         echo "Putting Oracle instance in archivelog $ORACLE_SID."
         # $SU -s /bin/bash  $ORACLE_OWNER -c "$SQLPLUS -s /nolog << EOF
@@ -132,7 +70,7 @@ prep_dg_01()
             select member from v\\\$logfile;
             spool off
             exit;
-            EOF" 
+EOF" 
         RETVAL1=$?
         if [ $RETVAL1 -eq 0 ]
         then
