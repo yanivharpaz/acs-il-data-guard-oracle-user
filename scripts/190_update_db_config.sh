@@ -92,6 +92,8 @@ prep_dg_01()
     #     exit
     # fi
     # Check if the DB is already started
+    echo `ps -ef | egrep pmon_$ORACLE_SID'\>' | $GREP -v grep`
+    
     pmon=`ps -ef | egrep pmon_$ORACLE_SID'\>' | $GREP -v grep`
     echo "pmon: $pmon"
     if [ "$pmon" != "" ];
