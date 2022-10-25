@@ -8,7 +8,7 @@
 # fi
 
 
-echo "Reading configuration"
+echo "Reading configuration 190"
 NEW_CONFIG_NAME="oracle_rdbms_config_sample.conf"
 NEW_CONFIGURATION="/tmp/$NEW_CONFIG_NAME"
 
@@ -93,7 +93,7 @@ prep_dg_01()
     # fi
     # Check if the DB is already started
     echo `ps -ef | egrep pmon_$ORACLE_SID'\>' | $GREP -v grep`
-    
+
     pmon=`ps -ef | egrep pmon_$ORACLE_SID'\>' | $GREP -v grep`
     echo "pmon: $pmon"
     if [ "$pmon" != "" ];

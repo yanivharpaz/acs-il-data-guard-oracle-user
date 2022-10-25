@@ -7,7 +7,7 @@
 #     exit 1
 # fi
 
-echo "Reading configuration"
+echo "Reading configuration 200"
 NEW_CONFIG_NAME="oracle_rdbms_config_sample.conf"
 NEW_CONFIGURATION="/tmp/$NEW_CONFIG_NAME"
 
