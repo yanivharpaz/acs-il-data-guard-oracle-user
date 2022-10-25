@@ -84,13 +84,13 @@ if [ ! -f "$GREP" ]; then GREP=/bin/grep; fi
 # To start the DB
 prep_dg_01()
 {
-    check_for_configuration
-    RETVAL=$?
-    if [ $RETVAL -eq 1 ]
-    then
-        echo "The Oracle Database is not configured. You must run '/etc/init.d/oracledb_$ORACLE_SID-$ORACLE_VERSION configure' as the root user to configure the database."
-        exit
-    fi
+    # check_for_configuration
+    # RETVAL=$?
+    # if [ $RETVAL -eq 1 ]
+    # then
+    #     echo "The Oracle Database is not configured. You must run '/etc/init.d/oracledb_$ORACLE_SID-$ORACLE_VERSION configure' as the root user to configure the database."
+    #     exit
+    # fi
     # Check if the DB is already started
     pmon=`ps -ef | egrep pmon_$ORACLE_SID'\>' | $GREP -v grep`
     if [ "$pmon" != "" ];
