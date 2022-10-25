@@ -7,6 +7,12 @@
 #     exit 1
 # fi
 
+if [ $# -ne 1 ]
+then
+    echo "Usage: $0 [ STANDBY UNIQUE NAME ] "
+    exit 1
+fi
+
 
 echo "Reading configuration 300"
 NEW_CONFIG_NAME="oracle_rdbms_config_sample.conf"

@@ -7,6 +7,13 @@
 #     exit 1
 # fi
 
+if [ $# -ne 1 ]
+then
+    echo "Usage: $0 [ ORACLE_SID ] "
+    exit 1
+fi
+
+
 echo "Reading configuration 200"
 NEW_CONFIG_NAME="oracle_rdbms_config_sample.conf"
 NEW_CONFIGURATION="/tmp/$NEW_CONFIG_NAME"

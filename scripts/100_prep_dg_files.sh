@@ -6,7 +6,7 @@ echo "----------------------------------------------"
 
 if [ $# -ne 4 ]
 then
-    echo "Usage: sudo $0 [ ORACLE_SID ] [ STANDBY UNIQUE NAME ] [ PRIMARY_HOSTNAME ] [ STANDBY_HOSTNAME ] "
+    echo "Usage: $0 [ ORACLE_SID ] [ STANDBY UNIQUE NAME ] [ PRIMARY_HOSTNAME ] [ STANDBY_HOSTNAME ] "
     exit 1
 fi
 
