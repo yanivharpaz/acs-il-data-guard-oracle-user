@@ -93,6 +93,7 @@ prep_dg_01()
     # fi
     # Check if the DB is already started
     pmon=`ps -ef | egrep pmon_$ORACLE_SID'\>' | $GREP -v grep`
+    echo "pmon: $pmon"
     if [ "$pmon" != "" ];
     then
 
