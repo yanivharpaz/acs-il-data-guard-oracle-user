@@ -73,7 +73,7 @@ read_config_file()
 
 test_exec()
 {
-    "$SQLPLUS -s /nolog << EOF
+    "$SQLPLUS /nolog << EOF
             connect / as sysdba
             spool /tmp/prep_dg.log
             set echo on
