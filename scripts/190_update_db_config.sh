@@ -6,7 +6,7 @@
 #     echo "Usage: sudo $0 [ ORACLE_SID ] "
 #     exit 1
 # fi
-
+echo "ORACLE_SID       : $ORACLE_SID"
 echo "Reading configuration 190"
 NEW_CONFIG_NAME="oracle_rdbms_config_sample.conf"
 NEW_CONFIGURATION="/tmp/$NEW_CONFIG_NAME"
