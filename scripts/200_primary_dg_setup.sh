@@ -50,6 +50,6 @@ run_scripts_primary() {
 #prep_dg_01
 #cat /tmp/prep_dg.log
 
-# run_scripts_primary
+run_scripts_primary
 
 exit 0
