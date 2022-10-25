@@ -42,10 +42,11 @@ run_scripts_primary() {
     echo "/tmp/190_update_db_config.sh $ORACLE_SID"
     /bin/bash -c "/tmp/190_update_db_config.sh $ORACLE_SID"
     # /bin/bash -c "/tmp/112_open_port.sh $LISTENER_PORT"
-    $SU -s /bin/bash  $ORACLE_OWNER -c "/tmp/310_copy_tns_files_primary.sh"
-    $SU -s /bin/bash  $ORACLE_OWNER -c "/tmp/120_dg_broker_start.sh"
-    $SU -s /bin/bash  $ORACLE_OWNER -c "/tmp/110_restart_listener.sh"
-    $SU -s /bin/bash  $ORACLE_OWNER -c "/usr/bin/cp -pv $ORACLE_HOME/dbs/orapw* /tmp"
+
+    # $SU -s /bin/bash  $ORACLE_OWNER -c "/tmp/310_copy_tns_files_primary.sh"
+    # $SU -s /bin/bash  $ORACLE_OWNER -c "/tmp/120_dg_broker_start.sh"
+    # $SU -s /bin/bash  $ORACLE_OWNER -c "/tmp/110_restart_listener.sh"
+    # $SU -s /bin/bash  $ORACLE_OWNER -c "/usr/bin/cp -pv $ORACLE_HOME/dbs/orapw* /tmp"
 
 }
 #prep_dg_01
