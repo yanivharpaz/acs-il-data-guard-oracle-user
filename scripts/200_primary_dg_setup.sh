@@ -14,6 +14,7 @@ NEW_CONFIGURATION="/tmp/$NEW_CONFIG_NAME"
 . "$NEW_CONFIGURATION" $ORACLE_SID
 
 echo "ORACLE_HOME       : $ORACLE_HOME"
+echo "ORACLE_SID        : $ORACLE_SID"
 
 # General exports and vars
 export PATH=$ORACLE_HOME/bin:$PATH
