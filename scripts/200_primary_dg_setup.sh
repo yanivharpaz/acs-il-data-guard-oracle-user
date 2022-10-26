@@ -52,7 +52,7 @@ run_scripts_primary() {
     /bin/bash -c "/tmp/310_copy_tns_files_primary.sh"
     /bin/bash -c "/tmp/120_dg_broker_start.sh"
     /bin/bash -c "/tmp/110_restart_listener.sh"
-    /bin/bash -c "/usr/bin/cp -pv $ORACLE_HOME/dbs/orapw* /tmp"
+    # /bin/bash -c "/usr/bin/cp -pv $ORACLE_HOME/dbs/orapw* /tmp"
 
 }
 #prep_dg_01
