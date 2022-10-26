@@ -6,9 +6,37 @@ echo "----------------------------------------------"
 
 if [ $# -ne 4 ]
 then
+    echo "Please make sure you have defined the following variables:"
+    echo "ORACLE_SID, ORACLE_BASE, ORACLE_HOME"
     echo "Usage: $0 [ ORACLE_SID ] [ STANDBY UNIQUE NAME ] [ PRIMARY_HOSTNAME ] [ STANDBY_HOSTNAME ] "
+
     exit 1
 fi
+
+if [[ -z $ORACLE_HOME ]]; then
+  echo "ORACLE_HOME is not set, please define it"
+  exit 1
+else
+  echo "ORACLE_HOME: $ORACLE_HOME"
+fi
+
+if [[ -z $ORACLE_SID ]]; then
+  echo "ORACLE_SID is not set, please define it"
+  exit 1
+else
+  echo "ORACLE_SID: $ORACLE_SID"
+fi
+
+if [[ -z $ORACLE_BASE ]]; then
+  echo "ORACLE_BASE is not set, please define it"
+  exit 1
+else
+  echo "ORACLE_BASE: $ORACLE_BASE"
+fi
+
+
+
+
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
