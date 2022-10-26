@@ -49,6 +49,7 @@ Oracle database data guard automation // from the oracle user
 
 ### Usage example on YouTube: https://youtu.be/5xYJvy7Pvgc
 ### With a different ORACLE_HOME: https://youtu.be/L0cY2xxIA6I
+### With a different ORACLE_HOME and without root or sudo: https://youtu.be/CTnZcVd0e-c  
 
 
 ---
