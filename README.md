@@ -16,7 +16,7 @@ Oracle database data guard automation // from the oracle user
 * Open port between the servers (default 1521)
 * Oracle RDBMS software installed on both primary and standby
 * Copy the password file from the primary to the secondary ($ORACLE_HOME/dbs)
-* Be familiar with the sys password on the primary
+* Put the sys password on this environment variable: SYS_PASSWORD (set it on oracle_rdbms_config_sample.conf or comment this line if you set it outside)
 
 ## Steps on the creation process
 
