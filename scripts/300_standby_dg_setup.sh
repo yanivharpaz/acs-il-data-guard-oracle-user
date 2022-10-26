@@ -9,7 +9,7 @@
 
 if [ $# -ne 1 ]
 then
-    echo "Usage: $0 [ ORACLE_SID ] "
+    echo "Usage: $0 [ Primary ORACLE_SID ] "
     exit 1
 fi
 
