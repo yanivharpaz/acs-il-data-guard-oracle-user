@@ -26,6 +26,11 @@ sudo iptables -I INPUT -p tcp --dport 1521 -j ACCEPT -m comment --comment "Allow
 
 ```  
 
+## open the passive FTP option for the password file copy (optional)
+```
+sudo setsebool ftpd_use_passive_mode on
+
+```
 
 ## Steps on the creation process
 
