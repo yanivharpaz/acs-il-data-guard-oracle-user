@@ -18,6 +18,15 @@ Oracle database data guard automation // from the oracle user
 * Copy the password file from the primary to the secondary ($ORACLE_HOME/dbs)
 * Put the sys password on this environment variable: SYS_PASSWORD (set it on oracle_rdbms_config_sample.conf or comment this line if you set it outside)
 
+
+## Example how to make sure port 1521 in open  
+
+```  
+sudo iptables -I INPUT -p tcp --dport 1521 -j ACCEPT -m comment --comment "Allow remote desktop"
+
+```  
+
+
 ## Steps on the creation process
 
 ### On the primary
